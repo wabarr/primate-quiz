@@ -13,7 +13,7 @@ import os
 import secrets
 #secrets.py contains passwords and secret keys, and is included in the .gitignore file, so you need to manually copy it
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)),"..")
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +41,16 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'primatequiz',
 )
+
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR, 'templates'),
+    #os.path.join(PROJECT_DIR,'personalWebsite/templates'),
+    #os.path.join(PROJECT_DIR,'academicPhylogeny/templates'),
+)
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
