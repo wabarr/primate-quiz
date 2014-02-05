@@ -16,6 +16,7 @@ import secrets
 BASE_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)),"..")
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -24,6 +25,7 @@ SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEV = True
 
 TEMPLATE_DEBUG = True
 
@@ -94,3 +96,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if DEV:
+    STATIC_ROOT = "/Users/wab536/Desktop/static/"
+else:
+    STATIC_ROOT = "Path/To/StaticAppDirectory"
+
+STATICFILES_DIRS = (#'/home/wabarr/webapps/htdocs/',
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR,"base/static/base"),
+
+)
