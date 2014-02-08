@@ -60,13 +60,12 @@
 
 
     </div><!-- /.container -->
-
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4">.col-md-4</div>
+        {% block quiz_questions %}{% endblock %}
+        {% block quiz_results %}{% endblock %}
     </div>
+
+
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
