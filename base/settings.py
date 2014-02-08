@@ -99,7 +99,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 if DEV:
-    STATIC_ROOT = "/Users/wab536/Desktop/static/"
+    STATIC_ROOT = "/Users/AndrewBarr/Desktop/static/"
 else:
     STATIC_ROOT = "Path/To/StaticAppDirectory"
 

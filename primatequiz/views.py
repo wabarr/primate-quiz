@@ -9,7 +9,9 @@ def renderBase(request):
     return render_to_response("basic_bootstrap.html", context_instance=RequestContext(request))
 
 def quiz(request):
-    return HttpResponse("this is the quiz")
+    return render_to_response("splashpage.html",
+                                    {},
+                                    context_instance=RequestContext(request))
 
 def results(request, slug=None):
     if not slug:

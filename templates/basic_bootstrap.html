@@ -38,11 +38,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Which Primate Species are You?</a>
+          <a class="navbar-brand" href="#">The Primate Quiz</a>
         </div>
+        <!--
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#">Share</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -50,16 +51,10 @@
       </div>
     </div>
 
-    <div class="container">
+    {% block page_leader %}
 
-      <div class="starter-template">
-        <h1>Which Primate Species Are You?</h1>
-        <p class="lead">Answer the questions below to find out.</p>
-      </div>
+    {% endblock %}
 
-
-
-    </div><!-- /.container -->
     <div class="container">
         {% block quiz_questions %}{% endblock %}
         {% block quiz_results %}{% endblock %}
