@@ -1,5 +1,9 @@
 {% extends "basic_bootstrap.html" %}
 
+{% if species %}
+    {% block page_title %}I am a {{species.commonname}}!{% endblock %}
+{% endif %}
+
 {% block page_leader %}
 <div class="container">
 
