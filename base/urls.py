@@ -10,8 +10,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^base/', renderBase, name="renderBase"),
-    url(r'^primate_quiz/', include("primatequiz.urls"))
+    url(r'', include("primatequiz.urls"))
 )
 
 if settings.DEBUG:

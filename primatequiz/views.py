@@ -15,7 +15,7 @@ def quiz(request):
 
 def results(request, slug=None):
     if not slug:
-        return HttpResponseRedirect("/primate_quiz/")
+        return HttpResponseRedirect("/")
     else:
         rez = get_object_or_404(species, slug = slug)
 
