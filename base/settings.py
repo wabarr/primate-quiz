@@ -15,6 +15,9 @@ import secrets
 
 BASE_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)),"..")
 
+ADMINS = (
+    ('Andrew Barr', 'wabarr@gmail.com'),
+)
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +32,7 @@ DEV = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["are-awesome.com"]
 
 
 # Application definition
@@ -78,6 +81,15 @@ if DEV:
             'NAME': os.path.join(BASE_DIR, 'primatequiz.sqlite3'),
         }
     }
+    
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': "/home/wabarr/django_database.db",
+        }
+    }
+    
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -101,7 +113,7 @@ STATIC_URL = '/static/'
 if DEV:
     STATIC_ROOT = "/Users/AndrewBarr/Desktop/static/"
 else:
-    STATIC_ROOT = "Path/To/StaticAppDirectory"
+    STATIC_ROOT = "/home/wabarr/webapps/primates_are_awesome_static/static"
 
 STATICFILES_DIRS = (#'/home/wabarr/webapps/htdocs/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
