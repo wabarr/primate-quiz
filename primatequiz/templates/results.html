@@ -6,6 +6,7 @@
 
       <div class="starter-template">
         <h1>You are a {{ species.commonname }}</h1>
+        <h2><i>{{ species.sciname }}</i></h2>
 
       </div>
 
@@ -15,6 +16,6 @@
 {% endblock %}
 
 {% block quiz_results %}
-    <h2>{{ species.sciname }}</h2>
-    <img src = "/media/{{ species.pic }}">
+
+    <img src = "/media/{{ species.pic }}" width="100%">
 {% endblock %}
