@@ -17,7 +17,7 @@ def quiz(request):
 
 def results(request, slug=None):
     if not slug:
-        return HttpResponseRedirect("/")
+        rez = species.objects.order_by('?')[0]
     else:
         rez = get_object_or_404(species, slug = slug)
 
