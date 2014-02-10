@@ -10,7 +10,12 @@ def renderBase(request):
     return render_to_response("basic_bootstrap.html", context_instance=RequestContext(request))
 
 def quiz(request):
-    questions = question.objects.all()
+    questions = question.objects.order_by('?')
+    if len(questions) < 10:
+        questions = questions
+    else:
+        questions = questions[0:9]
+
     return render_to_response("splashpage.html",
                                     {"questions":questions},
                                     context_instance=RequestContext(request))

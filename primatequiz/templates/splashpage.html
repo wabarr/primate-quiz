@@ -5,14 +5,18 @@
 {% block page_leader %}
 
 
-
-<div class="container" style="padding-top: 30px">
+<div class="container pad-container">
+    <div class="TwentyPXFiller"></div>
+    <div class="TwentyPXFiller"></div>
     <img src="{% static 'primate_banner.png' %}" width="100%">
 </div>
 
-<div class="container" style="background-color: #96e386; border-radius:10px; margin-top:20px; margin-bottom:20px; text-align: center;">
 
-        <h1 style="padding-bottom:25px;">Which Primate Species Are You?</h1>
+
+<div class="container container-green-title">
+
+        <h1>Which Primate Species Are You?</h1>
+        <div class="TwentyPXFiller"></div>
 
 </div>
 
@@ -22,31 +26,33 @@
 
     {% for question in questions %}
 
-    <div class="padded-container" style='   background-color: {% cycle '#E8E8E8' '#C8C8C8' %};'>
-        <div class="padded-container">
+    <div class="container pad-container" style="background-color: {% cycle '#E8E8E8' '#C8C8C8' %};">
+
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="center-padded">{{ question.Q_text|upper }}</h2>
+                    <h1 class="center-padded">{{ question.Q_text|upper }}</h1>
                 </div>
             </div>
-        </div>
 
-        <div class="padded-container">
-            <div class="row">
-                <div class="col-md-3"><h3>{{ question.response1|upper }}</h3><br><input type="checkbox"></div>
-                <div class="col-md-3"><h3>{{ question.response2|upper }}</h3><br><input type="checkbox"></div>
-                <div class="col-md-3"><h3>{{ question.response3|upper }}</h3><br><input type="checkbox"></div>
-                <div class="col-md-3"><h3>{{ question.response4|upper }}</h3><br><input type="checkbox"></div>
-            </div>
-        </div>
+
+                <div class="row">
+                    <div class="col-md-3"><h3>{{ question.response1|upper }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-1"></div>
+                    <div class="col-md-3"><h3>{{ question.response2|upper }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-2"></div>
+                    <div class="col-md-3"><h3>{{ question.response3|upper }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-3"></div>
+                    <div class="col-md-3"><h3>{{ question.response4|upper }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-4"></div>
+                </div>
+
+                <div class="row">
+                    <div class="TwentyPXFiller"></div>
+                </div>
     </div>
 
-        <div class="container" style="padding-top:30px;">
-        </div>
+    <div class="TwentyPXFiller"></div>
+
 
     {% endfor %}
 
-    <div class="container" style="padding-top:30px; padding-bottom:30px; text-align:center;">
+    <div class="container pad-container" style="padding-top:30px; padding-bottom:30px; text-align:center;">
         <button type="button" class="btn btn-default btn-xlarge" onclick="location.href='/results/'">
         RESULTS
     </div>

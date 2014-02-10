@@ -6,13 +6,24 @@ body {
   text-align: center;
 }
 
-.container .padded-container {
-    padding-bottom: 10px;
+.pad-container {
+    padding-bottom: 15px;
     border-radius: 10px;
+}
+
+
+.TwentyPXFiller {
+    padding-top:20px;
+}
+
+.container-green-title {
+    background-color: #96e386; border-radius:10px; margin-top:20px; margin-bottom:20px; text-align: center;
 }
 
 .col-md-3 {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
