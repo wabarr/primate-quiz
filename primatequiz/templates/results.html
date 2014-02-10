@@ -12,9 +12,7 @@
 
       <div class="center-padded">
         <h1>You are a {{ species.commonname }}</h1>
-        <div class="fb-share-button"  data-type="button"></div>
-        <h2><i>{{ species.sciname }}</i></h2>
-
+        <h2><i>{{ species.sciname }}</i></h2><div class="fb-share-button"  data-type="button""></div>
       </div>
 
 
@@ -25,7 +23,6 @@
 {% block quiz_results %}
     <div class="container">
         <p class="center-padded">{{ species.description|safe }}</p>
-        <p class="center-padded">{{ species.funfact|safe }}</p>
     </div>
 
 

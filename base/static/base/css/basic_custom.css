@@ -1,8 +1,8 @@
 body {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .center-padded {
-  padding: 20px 15px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@ input[type="checkbox"] {
 
 .btn-xlarge {
     padding: 18px 28px;
-    background-color: #42e345;
+    background-color: #96e386;
     font-size: 40px;
     line-height: normal;
     -webkit-border-radius: 8px;
@@ -33,5 +33,5 @@ input[type="checkbox"] {
     }
 
 .btn-xlarge:hover {
-    background-color: #3ac63b;
+    background-color: #80c472;
 }
