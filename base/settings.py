@@ -86,7 +86,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': "/home/wabarr/django_database.db",
+            'NAME': "/home/wabarr/primate_quiz.db",
         }
     }
     
