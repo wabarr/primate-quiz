@@ -4,6 +4,13 @@
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script>
         $( document ).ready(function() {
+            var width = jQuery(window).width();
+            if(width < 1000){
+                $("#desktop-result-pic").remove();
+            }
+            else {
+                $("#mobile-result-pic").remove();
+            }
             $("#learn-more-container").hide();
             $("#learn-more-link").click(function(){
                 $("#learn-more-container").toggle();
@@ -64,7 +71,8 @@
     </div>
 
 
-    <img src = "/media/{{ species.pic }}" width="100%">
+    <img src = "/media/{{ species.pic }}" width="100%" id="desktop-result-pic">
+    <img src = "/media/{{ species.picmobile }}" width="100%" id="mobile-result-pic" >
     <div class="TwentyPXFiller"></div>
     <div class="TwentyPXFiller"></div>
 {% endblock %}

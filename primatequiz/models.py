@@ -12,8 +12,8 @@ class species(models.Model):
     commonname = models.CharField(max_length = 200,null=True, blank=True)
     description = models.TextField(max_length = 600, null=True, blank=True)
     funfact = models.CharField(max_length = 200,null=True, blank=True)
-    pic = models.ImageField(upload_to="pics/%Y/%m/%d")
-    #picmobile = models.ImageField(upload_to="pics/%Y/%m/%d")
+    pic = models.ImageField(upload_to="pics/%Y/%m/%d",help_text="between 1000 - 1300px width")
+    picmobile = models.ImageField(upload_to="pics/%Y/%m/%d", help_text="between 400 - 600px width")
     class Meta:
         verbose_name_plural = "species"
 
