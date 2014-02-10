@@ -64,7 +64,7 @@
         </p>
     </div>
 
-    {% if request.mobile %}
+    {% if request.is_touch_device %}
         <img src = "/media/{{ species.picmobile }}" width="100%" id="mobile-result-pic" >
     {% else %}
         <img src = "/media/{{ species.pic }}" width="100%" id="desktop-result-pic">
