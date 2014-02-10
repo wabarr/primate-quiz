@@ -113,7 +113,7 @@ STATIC_URL = '/static/'
 if DEV:
     STATIC_ROOT = "/Users/wab536/Desktop/static/"
 else:
-    STATIC_ROOT = "/home/wab536/webapps/primates_are_awesome_static/"
+    STATIC_ROOT = "/home/wabarr/webapps/primates_are_awesome_static/"
 
 STATICFILES_DIRS = (#'/home/wabarr/webapps/htdocs/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
