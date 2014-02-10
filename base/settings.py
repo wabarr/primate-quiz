@@ -127,3 +127,10 @@ STATICFILES_DIRS = (#'/home/wabarr/webapps/htdocs/',
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
+
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'wabarr'
+EMAIL_HOST_PASSWORD = secrets.EMAIL_HOST_PASSWORD
+DEFAULT_FROM_EMAIL = 'mail@wabarr.webfactional.com'
+SERVER_EMAIL = 'mail@wabarr.webfactional.com'
