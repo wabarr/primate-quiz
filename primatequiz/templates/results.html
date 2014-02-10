@@ -57,7 +57,10 @@
 
 {% block quiz_results %}
     <div class="container" id="learn-more-container">
-        <p class="center-padded">{{ species.description|safe }}</p>
+        <p class="center-padded">
+            {{ species.description|safe }}<br>
+            <span style="font-weight:bold;">Fun Fact: {{ species.funfact|safe }}</span>
+        </p>
     </div>
 
 
