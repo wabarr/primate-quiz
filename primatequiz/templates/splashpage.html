@@ -8,7 +8,12 @@
 <div class="container pad-container">
     <div class="TwentyPXFiller"></div>
     <div class="TwentyPXFiller"></div>
-    <img src="{% static 'primate_banner.png' %}" width="100%">
+    {% if flavour == "mobile" %}
+        <img src="{% static 'MOBILEprimate_banner.png' %}" width="100%">
+    {% else %}
+        <img src="{% static 'primate_banner.png' %}" width="100%">
+    {% endif %}
+
 </div>
 
 
