@@ -22,6 +22,11 @@ def quiz(request):
                                     context_instance=RequestContext(request))
 
 def results(request, slug=None):
+
+    #If the get parameter indicates that this is from a facebook share, then redirect to the main page
+    if request.GET.get("fromSocialMedia","") == "T":
+        return HttpResponseRedirect("/")
+
     if not slug:
         rez = species.objects.order_by('?')[0]
     else:
