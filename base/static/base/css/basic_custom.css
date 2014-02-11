@@ -46,3 +46,9 @@ input[type="checkbox"] {
 .btn-xlarge:hover {
     background-color: #80c472;
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

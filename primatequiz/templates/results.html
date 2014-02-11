@@ -26,6 +26,7 @@
     <meta property="og:image" content="{{ species.pic }}" />
     <meta property="og:description" content="Find out which primate species YOU are!" />
 {% endblock %}
+
 {% block page_leader %}
 <div class="container ">
 
@@ -42,8 +43,7 @@
     <div class="row" style="text-align:center;">
             <div class="col-md-4"></div>
             <div class="col-md-2">
-                    <div class="fb-share-button"  data-type="button"">
-                    </div>
+                    <div class="fb-share-button"  data-type="button""></div>
             </div>
             <div class="col-md-2"><a id="learn-more-link">Learn More</a></div>
             <div class="col-md-4"></div>
@@ -64,10 +64,10 @@
         </p>
     </div>
 
-    {% if request.is_touch_device %}
+    {% if flavour == "mobile" %}
         <img src = "/media/{{ species.picmobile }}" width="100%" id="mobile-result-pic" >
     {% else %}
-        <img src = "/media/{{ species.pic }}" width="100%" id="desktop-result-pic">
+        <img src = "/media/{{ species.pic }}" width="70%" id="desktop-result-pic">
     {% endif %}
 
 
