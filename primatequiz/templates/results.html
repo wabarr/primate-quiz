@@ -33,25 +33,13 @@
       <div class="row">
           <div class="col-md-12">
               <div class="center-padded">
-                <h1>You are a {{ species.commonname }}</h1>
-
-                <h2><i>{{ species.sciname }}</i></h2>
+                <h1>You are a {{ species.commonname }}
+                    <span style="font-style:italic; font-size:60%">({{ species.sciname }})</span>
+                </h1>
                </div>
           </div>
       </div>
 
-    <div class="row" style="text-align:center;">
-            <div class="col-md-4"></div>
-            <div class="col-md-2">
-                    <div class="fb-share-button"  data-type="button""></div>
-            </div>
-            <div class="col-md-2"><a id="learn-more-link">Hide Details</a></div>
-            <div class="col-md-4"></div>
-    </div>
-
-    <div class="row">
-        <div class="TwentyPXFiller"></div>
-    </div>
 
 </div>
 {% endblock %}
@@ -64,6 +52,22 @@
         <p class="center-padded">
             <span style="font-weight:bold;">Fun Fact: {{ species.funfact|safe }}</span>
         </p>
+    </div>
+
+    <div class="container" style="text-align:center;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-2">
+                    <div class="fb-share-button"  data-type="button""></div>
+            </div>
+            <div class="col-md-2"><a id="learn-more-link">Hide Details</a></div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="TwentyPXFiller"></div>
+        </div>
+
     </div>
 
     {% if flavour == "mobile" %}
