@@ -15,7 +15,7 @@ def quiz(request):
     if len(questions) < 5:
         questions = questions
     else:
-        questions = questions[0:4]
+        questions = questions[0:6]
     result = species.objects.order_by('?')[0]
     return render_to_response("splashpage.html",
                                     {"questions":questions,"result":result},
