@@ -52,3 +52,11 @@ img {
     margin-left: auto;
     margin-right: auto
 }
+
+.btn {
+    background-color: #96e386;
+}
+
+.btn:hover {
+    background-color: #80c472;
+}
