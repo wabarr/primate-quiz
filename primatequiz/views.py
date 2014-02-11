@@ -12,10 +12,10 @@ def renderBase(request):
 
 def quiz(request):
     questions = question.objects.order_by('?')
-    if len(questions) < 10:
+    if len(questions) < 5:
         questions = questions
     else:
-        questions = questions[0:9]
+        questions = questions[0:4]
     result = species.objects.order_by('?')[0]
     return render_to_response("splashpage.html",
                                     {"questions":questions,"result":result},
