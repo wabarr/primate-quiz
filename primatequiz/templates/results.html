@@ -1,4 +1,5 @@
 {% extends "basic_bootstrap.html" %}
+{% load aORan %} {% comment %} {}
 
 {% block javascript_docready %}
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -47,7 +48,7 @@
       <div class="row">
           <div class="col-md-12">
               <div class="center-padded">
-                <h1>You are a {{ species.commonname }}
+                <h1>You are {{ species.commonname|an }} {{ species.commonname }}
                     <span style="font-style:italic; font-size:60%">({{ species.sciname }})</span>
                 </h1>
                </div>
