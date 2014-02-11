@@ -59,7 +59,8 @@
             <div class="col-md-3"></div>
 
             <div class="col-md-3">
-                <button type="button" class="btn btn-default" onclick="location.href='/'">
+                <button type="button" class="btn btn-default" onclick="location.href='/'"
+                        {% if flavour == "mobile" %} style="padding-bottom:10px;">{% endif %}>
                 Take Quiz Again
             </div>
 
