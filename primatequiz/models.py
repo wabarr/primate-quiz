@@ -18,7 +18,7 @@ class species(models.Model):
         verbose_name_plural = "species"
 
     def __unicode__(self):
-        return self.sciname
+        return self.commonname + " (" + self.sciname + ")"
 
 # ##attempt to resize images for mobile
 #     def save(self):
@@ -43,16 +43,4 @@ class species(models.Model):
 #             print "cannot create thumbnail"
 #
 #         super(species, self).save()
-
-class question(models.Model):
-    Q_text = models.CharField(max_length = 150,null=True, blank=True)
-    response1 = models.CharField(max_length = 150,null=True, blank=True)
-    response2 = models.CharField(max_length = 150,null=True, blank=True)
-    response3 = models.CharField(max_length = 150,null=True, blank=True)
-    response4 = models.CharField(max_length = 150,null=True, blank=True)
-    response5 = models.CharField(max_length = 150,null=True, blank=True)
-    def __unicode__(self):
-        return self.Q_text
-
-
 

@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'primatequiz',
+    'questions',
     'django_mobile',#for context appropriate sizing of images, etc
 )
 
