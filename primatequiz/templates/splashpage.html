@@ -35,16 +35,16 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="center-padded">Q{{ forloop.counter }}: {{ question.Q_text|upper }}</h1>
+                    <h1 class="center-padded">Q{{ forloop.counter }}: {{ question.Q_text|upper|safe }}</h1>
                 </div>
             </div>
 
 
                 <div class="row">
-                    <div class="col-md-3"><h3>{{ question.response1 }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-1"></div>
-                    <div class="col-md-3"><h3>{{ question.response2 }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-2"></div>
-                    <div class="col-md-3"><h3>{{ question.response3 }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-3"></div>
-                    <div class="col-md-3"><h3>{{ question.response4 }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-4"></div>
+                    <div class="col-md-3"><h3>{{ question.response1|safe }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-1"></div>
+                    <div class="col-md-3"><h3>{{ question.response2|safe }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-2"></div>
+                    <div class="col-md-3"><h3>{{ question.response3|safe }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-3"></div>
+                    <div class="col-md-3"><h3>{{ question.response4|safe }}</h3><br><input type="checkbox" class="ckbox{{ question.id }}" id="ckbox{{ question.id }}-4"></div>
                 </div>
 
                 <div class="row">
