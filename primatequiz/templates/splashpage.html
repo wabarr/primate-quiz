@@ -28,9 +28,12 @@
 
 </div>
 
-
-
-<div class="container container-green-title">
+        {% comment %}Full width title on mobile, less on desktop{% endcomment %}
+        {% if flavour == "mobile" %}
+            <div class="container container-green-title">
+        {% else %}
+            <div class="container container-green-title" style="width:40%;">
+        {% endif %}
 
         <h1>Which Primate Species Are You?</h1>
         <div class="TwentyPXFiller"></div>
