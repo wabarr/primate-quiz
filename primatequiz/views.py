@@ -15,9 +15,9 @@ def quiz(request):
         questions = questions
     else:
         questions = questions[0:9]
-
+    result = species.objects.order_by('?')[0]
     return render_to_response("splashpage.html",
-                                    {"questions":questions},
+                                    {"questions":questions,"result":result},
                                     context_instance=RequestContext(request))
 
 def results(request, slug=None):
