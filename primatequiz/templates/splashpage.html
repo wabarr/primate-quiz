@@ -31,6 +31,16 @@
 
     {% for question in questions %}
 
+    {% if forloop.counter == 3 %}
+        <div class="container pad-container" style="padding-top:30px; padding-bottom:30px; text-align:center;">
+            {% if flavour == "mobile" %}
+                <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=ancientecocom-20&o=1&p=21&l=ur1&category=mp3&f=ifr" width="125" height="125" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            {% else %}
+                <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=ancientecocom-20&o=1&p=48&l=ur1&category=musicandentertainmentrot&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            {% endif %}
+        </div>
+    {% endif %}
+
     <div class="container pad-container" style="background-color: {% cycle '#E8E8E8' '#C8C8C8' %};">
 
             <div class="row">
