@@ -144,9 +144,12 @@ STATICFILES_DIRS = (#'/home/wabarr/webapps/htdocs/',
     os.path.join(BASE_DIR,"base/static/base"),
     os.path.join(BASE_DIR,"primatequiz/static/primatequiz/images/"),
 
-)
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+)
+if DEV:
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+else:
+    MEDIA_ROOT = "/home/wabarr/webapps/media_primate_quiz/media/" #points to a the folder for the media primat quiz webfaction app, that simlinks to project media folder
 MEDIA_URL = "/media/"
 
 
