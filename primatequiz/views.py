@@ -26,9 +26,13 @@ def results(request, slug=None):
     else:
         useGoogleAnalytics =  True
 
-    #If the get parameter indicates that this is from a facebook share, then redirect to the main page
+    #If the get parameter indicates that this is from a facebook share,
+    #then redirect to the main page for humans, but don't redirect facebook crawler, because we want to share results page
     if request.GET.get("fromSocialMedia","") == "T":
-        return HttpResponseRedirect("/")
+        if "facebookexternalhit" in request.META['HTTP_USER_AGENT']:
+            pass
+        else:
+            return HttpResponseRedirect("/")
 
     if not slug:
         rez = species.objects.order_by('?')[0]
