@@ -1,6 +1,8 @@
 primate-quiz
 ============
 
+# Silly project to practice web-development techniques
+
 ## New (to me) django techniques in this project
 
 * Use [django-mobile] (https://github.com/gregmuellegger/django-mobile) middleware to serve mobile version of content
